@@ -1,18 +1,16 @@
 {
-  "name": "comp308_w2019_assignment1",
-  "version": "1.0.0",
-  "description": "Assignment 1 personal portfolio",
-  "main": "index.js",
+  "name": "comp308-w2019-assignment1",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "author": "Abirami",
-  "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.2.1",
-    "font-awesome": "^4.7.0",
-    "jquery": "^3.3.1",
-    "lite-server": "^2.4.0",
-    "popper.js": "^1.14.7"
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0"
   }
 }
