@@ -15,7 +15,7 @@
       <!--Navigation bar with logo-->
       <nav
         class="navbar navbar-expand-lg navbar-dark"
-        style="background-color: #40e0d0;"
+        style="background-color:gray;"
       >
         <a class="navbar-brand" href="#">PERSONAL PORTFOLIO</a>
         <a class="navbar-brand" href="/about">
@@ -103,17 +103,39 @@
     <main>
       <!--Home page content area-->
       <% if(title == "Home"){ %>
-      <div class="jumbotron">
-        <h1 class="display-4"><%= title%></h1>
-        <p class="lead">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container" style= "background-image:url(https://wallpaperstudio10.com/static/wpdb/wallpapers/1920x1080/179836.jpg); background-repeat:no-repeat; max-width: 100%;">
+        <h1 class="display-2" style="color:gray; font-weight:bolder">HOME</h1>
+        <p class="lead" style="font-weight:bolder">
           Thanks for visiting my portfolio!!
         </p>
         <hr class="my-4" />
-        <p>
-          I am Abirami. I am currently living in Toronto. I am a mainframe
-          developer.
-        </p>
+        <p1 class="display-6" style="color:black; font-size:22px; font-family: cursive;">
+          Hello there!!!! This is Abirami Kennedy
+          <br>
+          I am from Toronto.
+          <br>
+          <br>
+          <br>
+          To use my knowledge, talents, skills 
+          <br>
+          and empathy to earn
+          <br>
+          <br>
+          *** The love of my family
+          <br>
+          *** The companionship of my friends
+          <br>
+          *** The recognition of my peers
+          <br>
+          *** The leadership of my teams
+          <br>
+          <br>
+          Proceed to About me to know more....
+          <br>
+        </p1>
       </div>
+    </div>  
       <% } %> <% if(title == "About me"){ %>
       <div class="jumbotron">
         <h1 class="display-4"><%= title%></h1>
