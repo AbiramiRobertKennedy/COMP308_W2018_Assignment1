@@ -43,6 +43,8 @@
             <% if(title == "Home"){ %>
             <li class="nav-item active">
               <% } else { %>
+            </li>
+
             <li class="nav-item">
               <% } %>
               <a class="nav-link" href="/"
@@ -51,37 +53,45 @@
               >
             </li>
             <% if(title == "About me"){ %>
-              <li class="nav-item active">
-                <% } else { %>
-              <li class="nav-item">
-                <% } %>
+            <li class="nav-item active">
+              <% } else { %>
+            </li>
+
+            <li class="nav-item">
+              <% } %>
               <a class="nav-link" href="/about"
                 ><i class="fa fa-2x fa-user"></i>About me</a
               >
             </li>
             <% if(title == "My projects"){ %>
-              <li class="nav-item active">
-                <% } else { %>
-              <li class="nav-item">
-                <% } %>
+            <li class="nav-item active">
+              <% } else { %>
+            </li>
+
+            <li class="nav-item">
+              <% } %>
               <a class="nav-link" href="/projects"
                 ><i class="fa fa-2x fa-laptop"></i>Projects</a
               >
             </li>
             <% if(title == "Services offered"){ %>
-              <li class="nav-item active">
-                <% } else { %>
-              <li class="nav-item">
-                <% } %>
+            <li class="nav-item active">
+              <% } else { %>
+            </li>
+
+            <li class="nav-item">
+              <% } %>
               <a class="nav-link" href="/services"
                 ><i class="fa fa-2x fa-cogs"></i>Services</a
               >
             </li>
             <% if(title == "Contact me"){ %>
-              <li class="nav-item active">
-                <% } else { %>
-              <li class="nav-item">
-                <% } %>
+            <li class="nav-item active">
+              <% } else { %>
+            </li>
+
+            <li class="nav-item">
+              <% } %>
               <a class="nav-link" href="/contact"
                 ><i class="fa fa-2x fa-mobile"></i>Contact</a
               >
@@ -92,6 +102,7 @@
     </header>
     <main>
       <!--Home page content area-->
+      <% if(title == "Home"){ %>
       <div class="jumbotron">
         <h1 class="display-4"><%= title%></h1>
         <p class="lead">
@@ -103,6 +114,93 @@
           developer.
         </p>
       </div>
+      <% } %> <% if(title == "About me"){ %>
+      <div class="jumbotron">
+        <h1 class="display-4"><%= title%></h1>
+        <p class="lead">
+          Abirami Robert Kennedy
+        </p>
+        <hr class="my-4" />
+        <p>
+          I am a mainframe developer with 3 years of experience. I have worked
+          on COBOL, Jcl, REXX, DB2, VSAM etc. I worked as an Application
+          Development Analyst in Accenture India for 2 years and as a Technical
+          Systems Analyst Co-op in RBC for an year.
+        </p>
+        <img
+          id="image"
+          alt="headshot"
+          src="https://media.licdn.com/dms/image/C4E03AQE8AZ3k6RMAew/profile-displayphoto-shrink_200_200/0?e=1555545600&v=beta&t=bemJigWz_LSFFvFaEZ_sTes_cJ8I1s6i721uX0prStY"
+          height="140px"
+        />
+        <hr class="my-4" />
+        <button
+          type="button"
+          class="btn btn-info"
+          onclick="parent.open('https://www.linkedin.com/in/abiramirobertkennedy/')"
+        >
+          Resume
+        </button>
+      </div>
+      <% } %> <% if(title == "My projects"){ %>
+      <div class="jumbotron">
+        <h1 class="display-4"><%= title%></h1>
+        <p class="lead">
+          Bookhub
+        </p>
+        <hr class="my-4" />
+        <p>
+          Bookhub, is an application that provides a platform to search books of
+          their interest through name, ISBN, image and even barcode, tracks
+          their reading and stores them for future reference purposes. Also,
+          suggests user with great books on the market which matches their
+          interest. Users can chat about books to their friends often and can
+          even provide reviews on the books they have read which can help other
+          users as well.
+        </p>
+        <img
+          id="proj1"
+          alt="ozi"
+          src="https://bookhub.online/sites/default/files/book-hub-circles-blue_0.png"
+          height="140px"
+        />
+      </div>
+      <div class="jumbotron">
+        <p class="lead">
+          Ozi's Snooker Club
+        </p>
+        <hr class="my-4" />
+        <p>
+          Worked in creating a webpage for Ozi’s Snooker Club. Created a page
+          which can display professional player’s profiles and created database.
+          Displays tournament calendar and also feedback options.
+        </p>
+        <img
+          id="proj1"
+          alt="ozi"
+          src="https://www.wpbsa.com/wp-content/uploads/2016/05/generic3.jpg"
+          height="140px"
+        />
+      </div>
+      <div class="jumbotron">
+        <p class="lead">
+          Online Thrift Exchange
+        </p>
+        <hr class="my-4" />
+        <p>
+          A well-developed online platform which directly connects donors and
+          recipients and verifies charity organization authenticity,
+          qualification as well as eligibility plays a critical role in letting
+          people avoid fraud, donate wisely and receive safely and easily.
+        </p>
+        <img
+          id="proj1"
+          alt="ozi"
+          src="https://www.buffaloexchange.com/wp-content/uploads/MA2_Website_2.jpg"
+          height="140px"
+        />
+      </div>
+      <% } %>
     </main>
     <footer>
       <!--Sticky bottom footer-->
