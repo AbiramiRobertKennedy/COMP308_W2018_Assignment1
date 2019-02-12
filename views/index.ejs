@@ -1,110 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>COMP308_W2019_Assignment01</title>
-    <!--CSS Section-->
-    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="Contents/app.css" />
-  </head>
-  <body>
-    <header>
-      <!--Navigation bar with logo-->
-      <nav
-        class="navbar navbar-expand-lg navbar-dark"
-        style="background-color:gray;"
-      >
-      <a
-          class="navbar-brand"
-          href="https://comp308-w2019-assignment01-abi.herokuapp.com/about"
-        >
-          
-      <img
-            id="brand-image"
-            alt="Logo"
-            src="https://pngimage.net/wp-content/uploads/2018/05/ak-logo-png-5.png"
-            height="40px"
-          />
-        <a class="navbar-brand" href="#">PORTFOLIO</a>
-        
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <% if(title == "Home"){ %>
-            <li class="nav-item active">
-              <% } else { %>
-            </li>
-
-            <li class="nav-item">
-              <% } %>
-              <a class="nav-link" href="/"
-                ><i class="fa fa-2x fa-home"></i>Home
-                <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <% if(title == "About me"){ %>
-            <li class="nav-item active">
-              <% } else { %>
-            </li>
-
-            <li class="nav-item">
-              <% } %>
-              <a class="nav-link" href="/about"
-                ><i class="fa fa-2x fa-user"></i>About me</a
-              >
-            </li>
-            <% if(title == "My projects"){ %>
-            <li class="nav-item active">
-              <% } else { %>
-            </li>
-
-            <li class="nav-item">
-              <% } %>
-              <a class="nav-link" href="/projects"
-                ><i class="fa fa-2x fa-laptop"></i>Projects</a
-              >
-            </li>
-            <% if(title == "Services offered"){ %>
-            <li class="nav-item active">
-              <% } else { %>
-            </li>
-
-            <li class="nav-item">
-              <% } %>
-              <a class="nav-link" href="/services"
-                ><i class="fa fa-2x fa-cogs"></i>Services</a
-              >
-            </li>
-            <% if(title == "Contact me"){ %>
-            <li class="nav-item active">
-              <% } else { %>
-            </li>
-
-            <li class="nav-item">
-              <% } %>
-              <a class="nav-link" href="/contact"
-                ><i class="fa fa-2x fa-mobile"></i>Contact</a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+<!--Redirects to header.ejs in partials folder-->
+<% include ./partials/header.ejs %>   
     <main>
       <!--Home page content area-->
       <% if(title == "Home"){ %>
@@ -147,7 +42,9 @@
           </p1>
         </div>
       </div>
-      <% } %> <% if(title == "About me"){ %>
+      <% } %> 
+      <!--About page content area-->
+      <% if(title == "About me"){ %>
       <div class="jumbotron jumbotron-fluid">
         <div
           class="container"
@@ -181,7 +78,7 @@
             height="200px"
           />
           <hr class="my-4" />
-          <button
+          <button  //Resume link
             type="button"
             class="btn btn-info"
             onclick="parent.open('https://www.linkedin.com/in/abiramirobertkennedy/')"
@@ -190,7 +87,9 @@
           </button>
         </div>
       </div>
-      <% } %> <% if(title == "My projects"){ %>
+      <% } %> 
+      <!--Projects page content area-->
+      <% if(title == "My projects"){ %>
       <div class="jumbotron jumbotron-fluid">
         <div
           class="container"
@@ -199,7 +98,7 @@
           <h1 class="display-2" style="color:gray; font-weight:bolder">
             MY PROJECTS
           </h1>
-          <p class="lead" style="color:gray; font-weight:bold" ;>
+          <p class="lead" style="color:gray; font-weight:bold";>
             BOOKHUB
           </p>
           <hr class="my-4" />
@@ -215,7 +114,7 @@
           <br />
           <img
             id="proj1"
-            alt="ozi"
+            alt="book"
             src="https://bookhub.online/sites/default/files/book-hub-circles-blue_0.png"
             height="140px"
           />
@@ -237,7 +136,7 @@
           </p>
           <br />
           <img
-            id="proj1"
+            id="proj2"
             alt="ozi"
             src="https://www.wpbsa.com/wp-content/uploads/2016/05/generic3.jpg"
             height="140px"
@@ -262,14 +161,16 @@
           </p>
           <br />
           <img
-            id="proj1"
-            alt="ozi"
+            id="proj3"
+            alt="thrift"
             src="https://www.buffaloexchange.com/wp-content/uploads/MA2_Website_2.jpg"
             height="140px"
           />
         </div>
       </div>
-      <% } %> <% if(title == "Services offered"){ %>
+      <% } %> 
+      <!--Services page content area-->
+      <% if(title == "Services offered"){ %>
       <div class="jumbotron jumbotron-fluid">
         <div
           class="container"
@@ -282,24 +183,24 @@
           <br />
           <br />
           <img
-          id="proj1"
-          alt="ozi"
+          id="serv1"
+          alt="test"
           style="float:right"
           src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/102857819/original/cc0e8941eddba48226341e82a685719d7dd434aa/perform-testing-and-qa.jpg"
           height="200px"
           width="275px"
         />
         <img
-          id="proj1"
-          alt="ozi"
+          id="serv1"
+          alt="auto"
           style="float:right"
           src="https://img.deusm.com/informationweek/august/automation-shutterstock489.jpg"
           height="200px"
           width="275px"
         />
         <img
-          id="proj1"
-          alt="ozi"
+          id="serv1"
+          alt="dev"
           style="float:right"
           src="http://softsmith.ca/Professional/Portfolio/Courses/CPAN411/HTML/ispf.utility.dsparm.gif"
           height="200px"
@@ -327,16 +228,6 @@
       </div>
       <% } %>
     </main>
-    <footer>
-      <!--Sticky bottom footer-->
-      <nav class="navbar fixed-bottom navbar-light bg-light">
-        <h4>&copy;2019 Abirami</h4>
-      </nav>
-    </footer>
+<% include ./partials/footer.ejs %>
 
-    <!--Script Section-->
-    <script src="jquery/dist/jquery.min.js"></script>
-    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="Scripts/app.js"></script>
-  </body>
-</html>
+    
