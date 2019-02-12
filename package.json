@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node server.j"
+    "start": "node server.js"
+  },
+  "engines" : { 
+    "node" : "^10.15.0",
+    "npm" : "^6.0.0"
   },
   "dependencies": {
     "bootstrap": "^4.3.0",
